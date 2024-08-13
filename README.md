@@ -24,4 +24,5 @@ q1,b,q2
 q2,a,q0
 q2,b,q1
 
+```
 ![Grafo TikZ](afd.svg)
