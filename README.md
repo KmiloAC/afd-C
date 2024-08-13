@@ -6,9 +6,9 @@ Integrantes: <br>
 -Kevin Nicolai Rodríguez García <br>
 
 Donde:
-Estados: q0, q1, q2
-Alfabeto: a,b
-Estado inicial: q0
-Estado/s de aceptación: q2
+Estados: q0, q1, q2 <br>
+Alfabeto: a,b <br>
+Estado inicial: q0 <br>
+Estado/s de aceptación: q2 <br>
 
 ![Grafo TikZ](afd.svg)
