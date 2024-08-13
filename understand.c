@@ -18,7 +18,12 @@ int num_simbolos = 0;
 int num_estados_finales = 0;
 
 
-// 
+/* 
+
+Busca el índice de un elemento en un arreglo de cadenas. Compara el elemento con cada cadena en el arreglo y devuelve el 
+índice si encuentra una coincidencia. Si no encuentra el elemento, devuelve -1.
+
+*/
 
 int obtenerIndice(const char *elemento, char arreglo[][NOMBRE_MAX], int num_elementos) {
     for (int i = 0; i < num_elementos; i++) {
@@ -29,6 +34,13 @@ int obtenerIndice(const char *elemento, char arreglo[][NOMBRE_MAX], int num_elem
     return -1; // Devuelve -1 si no encuentra el elemento
 }
 
+/* 
+
+Verifica si un estado dado es uno de los estados finales. 
+Compara el estado con cada estado final registrado y devuelve 1 si es un estado final, o 0 si no lo es.
+
+*/
+
 int esEstadoFinal(const char *estado) {
     for (int i = 0; i < num_estados_finales; i++) {
         if (strcmp(estados_finales[i], estado) == 0) {
@@ -38,6 +50,14 @@ int esEstadoFinal(const char *estado) {
     return 0; // Falso si el estado no es final
 }
 
+
+/* 
+
+Procesa una cadena de entrada de acuerdo con el autómata definido por los estados, alfabeto y matriz de transiciones.
+Inicia en el estado inicial y sigue las transiciones definidas en la matriz según los símbolos en la cadena. 
+Al final, verifica si el estado final alcanzado es uno de los estados finales.
+
+*/
 
 void procesarCadena(const char *cadena) {
     char estado_actual[NOMBRE_MAX];
@@ -95,7 +115,12 @@ void procesarCadena(const char *cadena) {
     }
 }
 
+/* 
 
+Lee un archivo de configuración para definir los estados, alfabeto, estado inicial, estados finales y transiciones del autómata. 
+El archivo debe tener al menos cinco líneas para cada sección. Configura las variables globales según los datos del archivo.
+
+*/
 
 
 void readConfig(const char *filename) {
@@ -205,6 +230,12 @@ void readConfig(const char *filename) {
     fclose(file);
 }
 
+/* 
+
+Imprime la matriz de transiciones en formato tabular. Muestra las transiciones entre estados para cada símbolo en el alfabeto.
+
+*/
+
 
 void imprimirMatrizTransicion() {
     int ancho_celda = 8;  // Ancho fijo de la celda
@@ -241,6 +272,13 @@ void imprimirMatrizTransicion() {
     }
 }
 
+
+/* 
+
+Función principal del programa. Solicita el nombre del archivo de configuración, lee el archivo para configurar el autómata, 
+imprime la matriz de transiciones y procesa una cadena de entrada.
+
+*/
 
 int main() {
     char filename[100];
