@@ -1,6 +1,6 @@
 # afd-C
 
-Integrantes:
--Camilo Andres López Contreras
--Miguel Fernández De La Cruz
--Kevin Nicolai Rodríguez García 
+Integrantes: <br>
+-Camilo Andres López Contreras <br>
+-Miguel Fernández De La Cruz <br>
+-Kevin Nicolai Rodríguez García <br>
