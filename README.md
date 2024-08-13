@@ -29,7 +29,7 @@ Para luego leer una cadena de caracteres donde verificara que cada una de las le
 
  ```plaintext
 Ejemplo de cadena: ab
-Esta cadena debe de ser aceptada
+Esta cadena ha sido aceptada
 ```
 
 ![Grafo TikZ](afd.svg)
